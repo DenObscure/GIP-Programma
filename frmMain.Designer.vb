@@ -162,6 +162,7 @@ Partial Class frmMain
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabWelcome.SuspendLayout()
         CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,6 +203,7 @@ Partial Class frmMain
         '
         'TabWelcome
         '
+        Me.TabWelcome.Controls.Add(Me.Label2)
         Me.TabWelcome.Controls.Add(Me.lblWelkom)
         Me.TabWelcome.Controls.Add(Me.Label1)
         Me.TabWelcome.Controls.Add(Me.pbPijl)
@@ -1486,6 +1488,15 @@ Partial Class frmMain
         '
         Me.ToolTip1.IsBalloon = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(383, 238)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(25, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "kak"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1674,5 +1685,6 @@ Partial Class frmMain
     Friend WithEvents pbPijl As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lblWelkom As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class
