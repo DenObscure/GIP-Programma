@@ -1,0 +1,11 @@
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\bin\Release\GIP-Programma.exe
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\bin\Release\GIP-Programma.pdb
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\bin\Release\GIP-Programma.xml
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\obj\x86\Release\ResolveAssemblyReference.cache
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\obj\x86\Release\GIP_Programma.frmMain.resources
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\obj\x86\Release\GIP_Programma.Resources.resources
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\obj\x86\Release\GenerateResource.read.1.tlog
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\obj\x86\Release\GenerateResource.write.1.tlog
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\obj\x86\Release\GIP-Programma.exe
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\obj\x86\Release\GIP-Programma.xml
+I:\School\6 Informatica\GIP\GIP - Programma DEFTIG\GIP-Programma\GIP-Programma\obj\x86\Release\GIP-Programma.pdb
