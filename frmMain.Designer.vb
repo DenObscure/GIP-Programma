@@ -27,7 +27,6 @@ Partial Class frmMain
         Me.TabWelcome = New System.Windows.Forms.TabPage()
         Me.lblWelkom = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.pbPijl = New System.Windows.Forms.PictureBox()
         Me.TabNewFac = New System.Windows.Forms.TabPage()
         Me.btnResetNewFac = New System.Windows.Forms.Button()
         Me.dtp1 = New System.Windows.Forms.DateTimePicker()
@@ -163,9 +162,9 @@ Partial Class frmMain
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.pbPijl = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabWelcome.SuspendLayout()
-        CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNewFac.SuspendLayout()
         CType(Me.pbUitkomst, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbQ8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,6 +184,7 @@ Partial Class frmMain
         Me.MenuStrip1.SuspendLayout()
         Me.gbMenu.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -228,19 +228,11 @@ Partial Class frmMain
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(258, 115)
+        Me.Label1.Location = New System.Drawing.Point(171, 105)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(425, 31)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Begin door een opdracht te kiezen"
-        '
-        'pbPijl
-        '
-        Me.pbPijl.Location = New System.Drawing.Point(2, 14)
-        Me.pbPijl.Name = "pbPijl"
-        Me.pbPijl.Size = New System.Drawing.Size(306, 273)
-        Me.pbPijl.TabIndex = 2
-        Me.pbPijl.TabStop = False
         '
         'TabNewFac
         '
@@ -1497,6 +1489,14 @@ Partial Class frmMain
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "kak"
         '
+        'pbPijl
+        '
+        Me.pbPijl.Location = New System.Drawing.Point(2, -10)
+        Me.pbPijl.Name = "pbPijl"
+        Me.pbPijl.Size = New System.Drawing.Size(151, 106)
+        Me.pbPijl.TabIndex = 2
+        Me.pbPijl.TabStop = False
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1515,7 +1515,6 @@ Partial Class frmMain
         Me.TabControl1.ResumeLayout(False)
         Me.TabWelcome.ResumeLayout(False)
         Me.TabWelcome.PerformLayout()
-        CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNewFac.ResumeLayout(False)
         Me.TabNewFac.PerformLayout()
         CType(Me.pbUitkomst, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1542,6 +1541,7 @@ Partial Class frmMain
         Me.MenuStrip1.PerformLayout()
         Me.gbMenu.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1682,9 +1682,9 @@ Partial Class frmMain
     Friend WithEvents btnPrint As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents TabWelcome As System.Windows.Forms.TabPage
-    Friend WithEvents pbPijl As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lblWelkom As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents pbPijl As System.Windows.Forms.PictureBox
 
 End Class

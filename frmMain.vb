@@ -79,6 +79,7 @@ Public Class frmMain
 
     Private Sub btnNewFact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNewFact.Click
         TabControl1.SelectedTab = TabNewFac
+        ToolTip1.Show("Kies een klant", cbKlant)
     End Sub
 
     Private Sub btnPrijzenAanp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrijzenAanp.Click
@@ -113,6 +114,7 @@ Public Class frmMain
         lblPostcode.Text = GegevensKlant.Postcode
         lblStraat.Text = GegevensKlant.Straat
         lblStraatNr.Text = GegevensKlant.Nummer
+        ToolTip1.Hide(cbKlant)
     End Sub
 
     Private Sub btnShowFacs_Click(sender As System.Object, e As System.EventArgs) Handles btnShowFacs.Click
@@ -546,6 +548,41 @@ Public Class frmMain
                 oSheet.Range("G10").Value = lblPostcode.Text + " " + lblGemeente.Text
                 oSheet.Range("G11").Value = lblLand.Text
 
+                oSheet.Range("B15").Value = txtAantal1.Text
+                oSheet.Range("B16").Value = txtAantal2.Text
+                oSheet.Range("B17").Value = txtAantal3.Text
+                oSheet.Range("B18").Value = txtAantal4.Text
+                oSheet.Range("B19").Value = txtAantal5.Text
+                oSheet.Range("B20").Value = txtAantal6.Text
+                oSheet.Range("B21").Value = txtAantal7.Text
+                oSheet.Range("B22").Value = txtAantal8.Text
+                oSheet.Range("B23").Value = txtAantal9.Text
+                oSheet.Range("B24").Value = txtAantal10.Text
+
+                oSheet.Range("C15").Value = lblArtId1.Text
+                oSheet.Range("C16").Value = lblArtId2.Text
+                oSheet.Range("C17").Value = lblArtId3.Text
+                oSheet.Range("C18").Value = lblArtId4.Text
+                oSheet.Range("C19").Value = lblArtId5.Text
+                oSheet.Range("C20").Value = lblArtId6.Text
+                oSheet.Range("C21").Value = lblArtId7.Text
+                oSheet.Range("C22").Value = lblArtId8.Text
+                oSheet.Range("C23").Value = lblArtId9.Text
+                oSheet.Range("C24").Value = lblArtId10.Text
+
+                oSheet.Range("D15").Value = cbOms1.SelectedItem
+                oSheet.Range("D16").Value = cbOms2.SelectedItem
+                oSheet.Range("D17").Value = cbOms3.SelectedItem
+                oSheet.Range("D18").Value = cbOms4.SelectedItem
+                oSheet.Range("D19").Value = cbOms5.SelectedItem
+                oSheet.Range("D20").Value = cbOms6.SelectedItem
+                oSheet.Range("D21").Value = cbOms7.SelectedItem
+                oSheet.Range("D22").Value = cbOms8.SelectedItem
+                oSheet.Range("D23").Value = cbOms9.SelectedItem
+                oSheet.Range("D24").Value = cbOms10.SelectedItem
+
+
+
                 oBook.SaveAs(My.Application.Info.DirectoryPath + "/Resources/facturen/Invoice" + lblFacNr.Text + ".xls", True)
                 oExcel.Quit()
             Else
@@ -763,7 +800,7 @@ Public Class frmMain
     End Sub
 
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint.Click
+    Private Sub btnPrint_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint.Click
         selectedRow = dgvShowFacturen.CurrentRow.Index + 1
         Dim strFile As String = My.Application.Info.DirectoryPath + "\Resources\facturen\Invoice" + selectedRow.ToString + ".xls"
         Dim objProcess As New System.Diagnostics.ProcessStartInfo
@@ -781,6 +818,18 @@ Public Class frmMain
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub CheckChar(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtAantal1.KeyPress, txtAantal2.KeyPress, txtAantal3.KeyPress, txtAantal4.KeyPress, txtAantal5.KeyPress, txtAantal6.KeyPress, txtAantal7.KeyPress, txtAantal8.KeyPress, txtAantal9.KeyPress, txtAantal10.KeyPress
+        If e.KeyChar <> ControlChars.Back Then
+            If CType(sender, System.Windows.Forms.TextBox).Text.Contains(",") Or CType(sender, System.Windows.Forms.TextBox).Text.Contains(".") Then
+                e.Handled = Not (Char.IsDigit(e.KeyChar))
+            ElseIf CType(sender, System.Windows.Forms.TextBox).Text.Length = 0 Then
+                e.Handled = Not (Char.IsDigit(e.KeyChar))
+            ElseIf CType(sender, System.Windows.Forms.TextBox).Text.Length > 0 Then
+                e.Handled = Not (Char.IsDigit(e.KeyChar) Or e.KeyChar = "," Or e.KeyChar = ".")
+            End If
+        End If
     End Sub
 
 End Class

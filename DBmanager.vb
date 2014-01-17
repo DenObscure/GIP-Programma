@@ -277,5 +277,3 @@ Public Class DBmanager
     End Function
 
 End Class
-
-
