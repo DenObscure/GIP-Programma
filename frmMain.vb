@@ -139,6 +139,8 @@ Public Class frmMain
             Else
                 txtAantal1.Enabled = False
             End If
+            lblTotEx1.Text = Integer.Parse(txtAantal1.Text) * Double.Parse(lblPrijs1.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
 
@@ -158,6 +160,8 @@ Public Class frmMain
             Else
                 txtAantal2.Enabled = False
             End If
+            lblTotEx2.Text = Integer.Parse(txtAantal2.Text) * Double.Parse(lblPrijs2.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
 
@@ -178,6 +182,8 @@ Public Class frmMain
             Else
                 txtAantal3.Enabled = False
             End If
+            lblTotEx3.Text = Integer.Parse(txtAantal3.Text) * Double.Parse(lblPrijs3.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
 
@@ -198,6 +204,8 @@ Public Class frmMain
             Else
                 txtAantal4.Enabled = False
             End If
+            lblTotEx4.Text = Integer.Parse(txtAantal4.Text) * Double.Parse(lblPrijs4.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
 
@@ -218,6 +226,8 @@ Public Class frmMain
             Else
                 txtAantal5.Enabled = False
             End If
+            lblTotEx5.Text = Integer.Parse(txtAantal5.Text) * Double.Parse(lblPrijs5.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
 
@@ -238,6 +248,8 @@ Public Class frmMain
             Else
                 txtAantal6.Enabled = False
             End If
+            lblTotEx6.Text = Integer.Parse(txtAantal6.Text) * Double.Parse(lblPrijs6.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
 
@@ -258,6 +270,8 @@ Public Class frmMain
             Else
                 txtAantal7.Enabled = False
             End If
+            lblTotEx7.Text = Integer.Parse(txtAantal7.Text) * Double.Parse(lblPrijs7.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
     Private Sub cbOms8_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbOms8.SelectedIndexChanged
@@ -277,6 +291,8 @@ Public Class frmMain
             Else
                 txtAantal8.Enabled = False
             End If
+            lblTotEx8.Text = Integer.Parse(txtAantal8.Text) * Double.Parse(lblPrijs8.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
 
@@ -297,6 +313,8 @@ Public Class frmMain
             Else
                 txtAantal9.Enabled = False
             End If
+            lblTotEx9.Text = Integer.Parse(txtAantal9.Text) * Double.Parse(lblPrijs9.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
 
@@ -317,6 +335,8 @@ Public Class frmMain
             Else
                 txtAantal10.Enabled = False
             End If
+            lblTotEx10.Text = Integer.Parse(txtAantal10.Text) * Double.Parse(lblPrijs10.Text.Replace("€", ""))
+            UpdateUitkomst()
         End If
     End Sub
 
