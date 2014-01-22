@@ -345,6 +345,7 @@ Public Class frmMain
     Private Sub txtAantal1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtAantal1.TextChanged
         If Not txtAantal1.Text = String.Empty And Not lblPrijs1.Text = String.Empty Then
             lblTotEx1.Text = Integer.Parse(txtAantal1.Text) * Double.Parse(lblPrijs1.Text.Replace("€", ""))
+
             UpdateUitkomst()
         End If
     End Sub
@@ -832,4 +833,43 @@ Public Class frmMain
         End If
     End Sub
 
+    Private Sub lblTotEx1_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx1.TextChanged
+        lblTotEx1.Text = FormatCurrency(lblTotEx1.Text, 3)
+    End Sub
+
+    Private Sub lblTotEx2_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx2.TextChanged
+        lblTotEx2.Text = FormatCurrency(lblTotEx2.Text, 3)
+    End Sub
+
+    Private Sub lblTotEx3_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx3.TextChanged
+        lblTotEx3.Text = FormatCurrency(lblTotEx3.Text, 3)
+    End Sub
+
+    Private Sub lblTotEx4_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx4.TextChanged
+        lblTotEx4.Text = FormatCurrency(lblTotEx4.Text, 3)
+    End Sub
+
+    Private Sub lblTotEx5_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx5.TextChanged
+        lblTotEx5.Text = FormatCurrency(lblTotEx5.Text, 3)
+    End Sub
+
+    Private Sub lblTotEx6_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx6.TextChanged
+        lblTotEx6.Text = FormatCurrency(lblTotEx6.Text, 3)
+    End Sub
+
+    Private Sub lblTotEx7_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx7.TextChanged
+        lblTotEx7.Text = FormatCurrency(lblTotEx7.Text, 3)
+    End Sub
+
+    Private Sub lblTotEx8_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx8.TextChanged
+        lblTotEx8.Text = FormatCurrency(lblTotEx8.Text, 3)
+    End Sub
+
+    Private Sub lblTotEx9_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx9.TextChanged
+        lblTotEx9.Text = FormatCurrency(lblTotEx9.Text, 3)
+    End Sub
+
+    Private Sub lblTotEx10_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx10.TextChanged
+        lblTotEx10.Text = FormatCurrency(lblTotEx10.Text, 3)
+    End Sub
 End Class

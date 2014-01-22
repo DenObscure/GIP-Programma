@@ -25,8 +25,10 @@ Partial Class frmMain
         Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabWelcome = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblWelkom = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.pbPijl = New System.Windows.Forms.PictureBox()
         Me.TabNewFac = New System.Windows.Forms.TabPage()
         Me.btnResetNewFac = New System.Windows.Forms.Button()
         Me.dtp1 = New System.Windows.Forms.DateTimePicker()
@@ -161,10 +163,9 @@ Partial Class frmMain
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.pbPijl = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabWelcome.SuspendLayout()
+        CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNewFac.SuspendLayout()
         CType(Me.pbUitkomst, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbQ8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,7 +185,6 @@ Partial Class frmMain
         Me.MenuStrip1.SuspendLayout()
         Me.gbMenu.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -214,6 +214,15 @@ Partial Class frmMain
         Me.TabWelcome.Text = "Welcome Screen"
         Me.TabWelcome.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(383, 238)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(25, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "kak"
+        '
         'lblWelkom
         '
         Me.lblWelkom.AutoSize = True
@@ -233,6 +242,14 @@ Partial Class frmMain
         Me.Label1.Size = New System.Drawing.Size(425, 31)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Begin door een opdracht te kiezen"
+        '
+        'pbPijl
+        '
+        Me.pbPijl.Location = New System.Drawing.Point(2, -10)
+        Me.pbPijl.Name = "pbPijl"
+        Me.pbPijl.Size = New System.Drawing.Size(151, 106)
+        Me.pbPijl.TabIndex = 2
+        Me.pbPijl.TabStop = False
         '
         'TabNewFac
         '
@@ -1480,23 +1497,6 @@ Partial Class frmMain
         '
         Me.ToolTip1.IsBalloon = True
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(383, 238)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(25, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "kak"
-        '
-        'pbPijl
-        '
-        Me.pbPijl.Location = New System.Drawing.Point(2, -10)
-        Me.pbPijl.Name = "pbPijl"
-        Me.pbPijl.Size = New System.Drawing.Size(151, 106)
-        Me.pbPijl.TabIndex = 2
-        Me.pbPijl.TabStop = False
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1515,6 +1515,7 @@ Partial Class frmMain
         Me.TabControl1.ResumeLayout(False)
         Me.TabWelcome.ResumeLayout(False)
         Me.TabWelcome.PerformLayout()
+        CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNewFac.ResumeLayout(False)
         Me.TabNewFac.PerformLayout()
         CType(Me.pbUitkomst, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1541,7 +1542,6 @@ Partial Class frmMain
         Me.MenuStrip1.PerformLayout()
         Me.gbMenu.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
