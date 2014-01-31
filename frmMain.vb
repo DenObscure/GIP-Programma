@@ -85,18 +85,21 @@ Public Class frmMain
     Private Sub btnPrijzenAanp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrijzenAanp.Click
         DBmanager.ShowArtikel()
         TabControl1.SelectedTab = TabEditPrijzen
+        ToolTip1.Hide(cbKlant)
     End Sub
 
     Private Sub btnAddKlant_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddKlant.Click
         DBmanager.ShowKlanten()
-        txtNewKlantID.Text = dgvShowKlanten.RowCount() + 1
         TabControl1.SelectedTab = TabNewKlant
+        ToolTip1.Hide(cbKlant)
+        txtNewKlantID.Text = dgvShowKlanten.Item(0, dgvShowKlanten.RowCount() - 1).Value.ToString() + 1
     End Sub
 
     Private Sub btnKlantAanp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnKlantAanp.Click
         DBmanager.ShowKlanten()
         txtNewKlantID.Text = dgvShowKlanten.RowCount() + 1
         TabControl1.SelectedTab = TabEditKlanten
+        ToolTip1.Hide(cbKlant)
     End Sub
 
     Private Sub frmMain_Resize(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Resize
@@ -127,6 +130,7 @@ Public Class frmMain
             selectedF = dgvShowFacturen.CurrentRow.Cells("id").Value
             DBmanager.SelectedFactuur(selectedF)
         End If
+        ToolTip1.Hide(cbKlant)
     End Sub
 
     Private Sub cbOms1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbOms1.SelectedIndexChanged
@@ -698,7 +702,7 @@ Public Class frmMain
         lblUitkomstMvh.Text = String.Empty
         lblTeBetalen.Text = String.Empty
 
-        txtAantal1.Enabled = False
+        txtAantal1.Enabled = True
         txtAantal2.Enabled = False
         txtAantal3.Enabled = False
         txtAantal4.Enabled = False
@@ -714,7 +718,7 @@ Public Class frmMain
         If Not lblUitkomstMvh.Text = String.Empty Then
             Dim btw As Double = Double.Parse(lblUitkomstMvh.Text) * 21 / 100
             lblUitkomstBedBtw.Text = btw
-            lblTeBetalen.Text = Format(btw + Double.Parse(lblUitkomstMvh.Text), "####0.00") ' "€ " &
+            lblTeBetalen.Text = FormatCurrency(Format(btw + Double.Parse(lblUitkomstMvh.Text), "####0.00"), 2)
         End If
     End Sub
 
@@ -730,7 +734,7 @@ Public Class frmMain
         Dim k As Klant = New Klant(txtNewKlantID.Text, txtNewBedrijfsnaam.Text, txtNewStraat.Text, txtNewNummer.Text, txtNewPostcode.Text, txtNewPlaats.Text, txtNewLand.Text, txtNewBTWnr.Text)
         DBmanager.KlantGegevensToevoegen(k)
         DBmanager.ShowKlanten()
-        txtNewKlantID.Text = dgvShowKlanten.RowCount() + 1
+        txtNewKlantID.Text = dgvShowKlanten.Item(0, dgvShowKlanten.RowCount() - 1).Value.ToString() + 1
     End Sub
 
     Private Sub dgvEditKlanten_CellEndEdit(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvEditKlanten.CellEndEdit
@@ -766,12 +770,14 @@ Public Class frmMain
 
     Private Sub btnAddklantIn_Click(sender As System.Object, e As System.EventArgs) Handles btnAddklantIn.Click
         DBmanager.ShowKlanten()
-        txtNewKlantID.Text = dgvShowKlanten.RowCount()
         TabControl1.SelectedTab = TabNewKlant
+        txtNewKlantID.Text = dgvShowKlanten.Item(0, dgvShowKlanten.RowCount() - 1).Value.ToString() + 1
     End Sub
 
     Private Sub BtnResetNewFac_Click(sender As System.Object, e As System.EventArgs) Handles btnResetNewFac.Click
+        reset = True
         ResetNewFac()
+        reset = False
         ErrorProvider1.Clear()
     End Sub
 
@@ -781,8 +787,8 @@ Public Class frmMain
 
     Private Sub dgvShowFacturen_UserDeletingRow(sender As System.Object, e As System.Windows.Forms.DataGridViewRowCancelEventArgs) Handles dgvShowFacturen.UserDeletingRow
         selectedRow += 1
-        DBmanager.DeleteRowFacGeg(selectedRow)
-        DBmanager.DeleteRowFac(selectedRow)
+        DBmanager.DeleteRowFacGeg(CInt(dgvShowFacturen.Item(0, dgvShowFacturen.CurrentRow.Index).Value.ToString()))
+        DBmanager.DeleteRowFac(CInt(dgvShowFacturen.Item(0, dgvShowFacturen.CurrentRow.Index).Value.ToString()))
     End Sub
 
     Private Sub dgvPrijzen_CellValueChanged(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvPrijzen.CellValueChanged
@@ -834,42 +840,42 @@ Public Class frmMain
     End Sub
 
     Private Sub lblTotEx1_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx1.TextChanged
-        lblTotEx1.Text = FormatCurrency(lblTotEx1.Text, 3)
+        lblTotEx1.Text = lblTotEx1.Text
     End Sub
 
     Private Sub lblTotEx2_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx2.TextChanged
-        lblTotEx2.Text = FormatCurrency(lblTotEx2.Text, 3)
+        lblTotEx2.Text = lblTotEx2.Text
     End Sub
 
     Private Sub lblTotEx3_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx3.TextChanged
-        lblTotEx3.Text = FormatCurrency(lblTotEx3.Text, 3)
+        lblTotEx3.Text = lblTotEx3.Text
     End Sub
 
     Private Sub lblTotEx4_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx4.TextChanged
-        lblTotEx4.Text = FormatCurrency(lblTotEx4.Text, 3)
+        lblTotEx4.Text = lblTotEx4.Text
     End Sub
 
     Private Sub lblTotEx5_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx5.TextChanged
-        lblTotEx5.Text = FormatCurrency(lblTotEx5.Text, 3)
+        lblTotEx5.Text = lblTotEx5.Text
     End Sub
 
     Private Sub lblTotEx6_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx6.TextChanged
-        lblTotEx6.Text = FormatCurrency(lblTotEx6.Text, 3)
+        lblTotEx6.Text = lblTotEx6.Text
     End Sub
 
     Private Sub lblTotEx7_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx7.TextChanged
-        lblTotEx7.Text = FormatCurrency(lblTotEx7.Text, 3)
+        lblTotEx7.Text = lblTotEx7.Text
     End Sub
 
     Private Sub lblTotEx8_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx8.TextChanged
-        lblTotEx8.Text = FormatCurrency(lblTotEx8.Text, 3)
+        lblTotEx8.Text = lblTotEx8.Text
     End Sub
 
     Private Sub lblTotEx9_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx9.TextChanged
-        lblTotEx9.Text = FormatCurrency(lblTotEx9.Text, 3)
+        lblTotEx9.Text = lblTotEx9.Text
     End Sub
 
     Private Sub lblTotEx10_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx10.TextChanged
-        lblTotEx10.Text = FormatCurrency(lblTotEx10.Text, 3)
+        lblTotEx10.Text = lblTotEx10.Text
     End Sub
 End Class
