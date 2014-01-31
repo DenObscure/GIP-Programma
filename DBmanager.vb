@@ -76,6 +76,8 @@ Public Class DBmanager
         Getconnection.Close()
         frmMain.dgvPrijzen.DataSource = ds
         frmMain.dgvPrijzen.DataMember = "Authors_table"
+        frmMain.dgvShowArtikels.DataSource = ds
+        frmMain.dgvShowArtikels.DataMember = "Authors_table"
         Return ds
     End Function
 

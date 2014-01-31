@@ -25,7 +25,6 @@ Partial Class frmMain
         Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabWelcome = New System.Windows.Forms.TabPage()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblWelkom = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pbPijl = New System.Windows.Forms.PictureBox()
@@ -131,6 +130,17 @@ Partial Class frmMain
         Me.txtNewKlantID = New System.Windows.Forms.TextBox()
         Me.lblNewKlantID = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TabNewArt = New System.Windows.Forms.TabPage()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtPïjs = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtPrijs = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtArtOms = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtArtId = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblArtikelgegevens = New System.Windows.Forms.Label()
         Me.TabEditPrijzen = New System.Windows.Forms.TabPage()
         Me.lblPrijzenAanp = New System.Windows.Forms.Label()
         Me.dgvPrijzen = New System.Windows.Forms.DataGridView()
@@ -155,6 +165,7 @@ Partial Class frmMain
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gbMenu = New System.Windows.Forms.GroupBox()
+        Me.btnNewArt = New System.Windows.Forms.Button()
         Me.btnShowFacs = New System.Windows.Forms.Button()
         Me.btnKlantAanp = New System.Windows.Forms.Button()
         Me.btnAddKlant = New System.Windows.Forms.Button()
@@ -163,6 +174,7 @@ Partial Class frmMain
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.dgvShowArtikels = New System.Windows.Forms.DataGridView()
         Me.TabControl1.SuspendLayout()
         Me.TabWelcome.SuspendLayout()
         CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,6 +186,8 @@ Partial Class frmMain
         CType(Me.pbQ82, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvShowKlanten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.TabNewArt.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.TabEditPrijzen.SuspendLayout()
         CType(Me.dgvPrijzen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabEditKlanten.SuspendLayout()
@@ -185,6 +199,7 @@ Partial Class frmMain
         Me.MenuStrip1.SuspendLayout()
         Me.gbMenu.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvShowArtikels, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -192,6 +207,7 @@ Partial Class frmMain
         Me.TabControl1.Controls.Add(Me.TabWelcome)
         Me.TabControl1.Controls.Add(Me.TabNewFac)
         Me.TabControl1.Controls.Add(Me.TabNewKlant)
+        Me.TabControl1.Controls.Add(Me.TabNewArt)
         Me.TabControl1.Controls.Add(Me.TabEditPrijzen)
         Me.TabControl1.Controls.Add(Me.TabEditKlanten)
         Me.TabControl1.Controls.Add(Me.TabShowFacs)
@@ -203,7 +219,6 @@ Partial Class frmMain
         '
         'TabWelcome
         '
-        Me.TabWelcome.Controls.Add(Me.Label2)
         Me.TabWelcome.Controls.Add(Me.lblWelkom)
         Me.TabWelcome.Controls.Add(Me.Label1)
         Me.TabWelcome.Controls.Add(Me.pbPijl)
@@ -213,15 +228,6 @@ Partial Class frmMain
         Me.TabWelcome.TabIndex = 5
         Me.TabWelcome.Text = "Welcome Screen"
         Me.TabWelcome.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(383, 238)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(25, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "kak"
         '
         'lblWelkom
         '
@@ -1222,6 +1228,109 @@ Partial Class frmMain
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Klantgegevens"
         '
+        'TabNewArt
+        '
+        Me.TabNewArt.Controls.Add(Me.dgvShowArtikels)
+        Me.TabNewArt.Controls.Add(Me.GroupBox2)
+        Me.TabNewArt.Controls.Add(Me.lblArtikelgegevens)
+        Me.TabNewArt.Location = New System.Drawing.Point(4, 22)
+        Me.TabNewArt.Name = "TabNewArt"
+        Me.TabNewArt.Size = New System.Drawing.Size(768, 624)
+        Me.TabNewArt.TabIndex = 6
+        Me.TabNewArt.Text = "tabNewArt"
+        Me.TabNewArt.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.txtPïjs)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.txtPrijs)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.txtArtOms)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.txtArtId)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Location = New System.Drawing.Point(21, 43)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(238, 133)
+        Me.GroupBox2.TabIndex = 19
+        Me.GroupBox2.TabStop = False
+        '
+        'txtPïjs
+        '
+        Me.txtPïjs.Location = New System.Drawing.Point(118, 100)
+        Me.txtPïjs.Name = "txtPïjs"
+        Me.txtPïjs.Size = New System.Drawing.Size(100, 20)
+        Me.txtPïjs.TabIndex = 23
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(77, 103)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(35, 13)
+        Me.Label7.TabIndex = 22
+        Me.Label7.Text = "BTW:"
+        '
+        'txtPrijs
+        '
+        Me.txtPrijs.Location = New System.Drawing.Point(118, 74)
+        Me.txtPrijs.Name = "txtPrijs"
+        Me.txtPrijs.Size = New System.Drawing.Size(100, 20)
+        Me.txtPrijs.TabIndex = 21
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(40, 74)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(72, 13)
+        Me.Label8.TabIndex = 20
+        Me.Label8.Text = "Eenheidsprijs:"
+        '
+        'txtArtOms
+        '
+        Me.txtArtOms.Location = New System.Drawing.Point(118, 46)
+        Me.txtArtOms.Name = "txtArtOms"
+        Me.txtArtOms.Size = New System.Drawing.Size(100, 20)
+        Me.txtArtOms.TabIndex = 19
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(17, 49)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(97, 13)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "Artikelomschrijving:"
+        '
+        'txtArtId
+        '
+        Me.txtArtId.Enabled = False
+        Me.txtArtId.Location = New System.Drawing.Point(118, 20)
+        Me.txtArtId.Name = "txtArtId"
+        Me.txtArtId.Size = New System.Drawing.Size(100, 20)
+        Me.txtArtId.TabIndex = 17
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(62, 23)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(50, 13)
+        Me.Label10.TabIndex = 16
+        Me.Label10.Text = "ArtikelID:"
+        '
+        'lblArtikelgegevens
+        '
+        Me.lblArtikelgegevens.AutoSize = True
+        Me.lblArtikelgegevens.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblArtikelgegevens.Location = New System.Drawing.Point(25, 18)
+        Me.lblArtikelgegevens.Name = "lblArtikelgegevens"
+        Me.lblArtikelgegevens.Size = New System.Drawing.Size(166, 25)
+        Me.lblArtikelgegevens.TabIndex = 18
+        Me.lblArtikelgegevens.Text = "Artikelgegevens"
+        '
         'TabEditPrijzen
         '
         Me.TabEditPrijzen.Controls.Add(Me.lblPrijzenAanp)
@@ -1424,6 +1533,7 @@ Partial Class frmMain
         '
         'gbMenu
         '
+        Me.gbMenu.Controls.Add(Me.btnNewArt)
         Me.gbMenu.Controls.Add(Me.btnShowFacs)
         Me.gbMenu.Controls.Add(Me.btnKlantAanp)
         Me.gbMenu.Controls.Add(Me.btnAddKlant)
@@ -1435,9 +1545,18 @@ Partial Class frmMain
         Me.gbMenu.TabIndex = 38
         Me.gbMenu.TabStop = False
         '
+        'btnNewArt
+        '
+        Me.btnNewArt.Location = New System.Drawing.Point(6, 101)
+        Me.btnNewArt.Name = "btnNewArt"
+        Me.btnNewArt.Size = New System.Drawing.Size(118, 36)
+        Me.btnNewArt.TabIndex = 42
+        Me.btnNewArt.Text = "Nieuw artikel"
+        Me.btnNewArt.UseVisualStyleBackColor = True
+        '
         'btnShowFacs
         '
-        Me.btnShowFacs.Location = New System.Drawing.Point(6, 217)
+        Me.btnShowFacs.Location = New System.Drawing.Point(6, 260)
         Me.btnShowFacs.Name = "btnShowFacs"
         Me.btnShowFacs.Size = New System.Drawing.Size(118, 36)
         Me.btnShowFacs.TabIndex = 41
@@ -1446,7 +1565,7 @@ Partial Class frmMain
         '
         'btnKlantAanp
         '
-        Me.btnKlantAanp.Location = New System.Drawing.Point(6, 159)
+        Me.btnKlantAanp.Location = New System.Drawing.Point(6, 202)
         Me.btnKlantAanp.Name = "btnKlantAanp"
         Me.btnKlantAanp.Size = New System.Drawing.Size(118, 36)
         Me.btnKlantAanp.TabIndex = 3
@@ -1459,7 +1578,7 @@ Partial Class frmMain
         Me.btnAddKlant.Name = "btnAddKlant"
         Me.btnAddKlant.Size = New System.Drawing.Size(118, 36)
         Me.btnAddKlant.TabIndex = 2
-        Me.btnAddKlant.Text = "Klant toevoegen"
+        Me.btnAddKlant.Text = "Nieuwe klant"
         Me.btnAddKlant.UseVisualStyleBackColor = True
         '
         'btnNewFact
@@ -1473,7 +1592,7 @@ Partial Class frmMain
         '
         'btnPrijzenAanp
         '
-        Me.btnPrijzenAanp.Location = New System.Drawing.Point(6, 119)
+        Me.btnPrijzenAanp.Location = New System.Drawing.Point(6, 162)
         Me.btnPrijzenAanp.Name = "btnPrijzenAanp"
         Me.btnPrijzenAanp.Size = New System.Drawing.Size(118, 36)
         Me.btnPrijzenAanp.TabIndex = 1
@@ -1496,6 +1615,15 @@ Partial Class frmMain
         'ToolTip1
         '
         Me.ToolTip1.IsBalloon = True
+        '
+        'dgvShowArtikels
+        '
+        Me.dgvShowArtikels.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvShowArtikels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvShowArtikels.Location = New System.Drawing.Point(21, 201)
+        Me.dgvShowArtikels.Name = "dgvShowArtikels"
+        Me.dgvShowArtikels.Size = New System.Drawing.Size(723, 403)
+        Me.dgvShowArtikels.TabIndex = 20
         '
         'frmMain
         '
@@ -1527,6 +1655,10 @@ Partial Class frmMain
         CType(Me.dgvShowKlanten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.TabNewArt.ResumeLayout(False)
+        Me.TabNewArt.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.TabEditPrijzen.ResumeLayout(False)
         Me.TabEditPrijzen.PerformLayout()
         CType(Me.dgvPrijzen, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1542,6 +1674,7 @@ Partial Class frmMain
         Me.MenuStrip1.PerformLayout()
         Me.gbMenu.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvShowArtikels, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1684,7 +1817,19 @@ Partial Class frmMain
     Friend WithEvents TabWelcome As System.Windows.Forms.TabPage
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lblWelkom As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents pbPijl As System.Windows.Forms.PictureBox
+    Friend WithEvents TabNewArt As System.Windows.Forms.TabPage
+    Friend WithEvents btnNewArt As System.Windows.Forms.Button
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtPïjs As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtPrijs As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtArtOms As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txtArtId As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents lblArtikelgegevens As System.Windows.Forms.Label
+    Friend WithEvents dgvShowArtikels As System.Windows.Forms.DataGridView
 
 End Class

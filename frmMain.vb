@@ -878,4 +878,10 @@ Public Class frmMain
     Private Sub lblTotEx10_TextChanged(sender As System.Object, e As System.EventArgs) Handles lblTotEx10.TextChanged
         lblTotEx10.Text = lblTotEx10.Text
     End Sub
+
+    Private Sub btnNewArt_Click(sender As System.Object, e As System.EventArgs) Handles btnNewArt.Click
+        DBmanager.ShowArtikel()
+        TabControl1.SelectedTab = TabNewArt
+    End Sub
+
 End Class
