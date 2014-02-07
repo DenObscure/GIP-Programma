@@ -29,6 +29,27 @@ Partial Class frmMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pbPijl = New System.Windows.Forms.PictureBox()
         Me.TabNewFac = New System.Windows.Forms.TabPage()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cbOms10 = New System.Windows.Forms.ComboBox()
+        Me.cbOms9 = New System.Windows.Forms.ComboBox()
+        Me.cbOms8 = New System.Windows.Forms.ComboBox()
+        Me.cbOms7 = New System.Windows.Forms.ComboBox()
+        Me.cbOms6 = New System.Windows.Forms.ComboBox()
+        Me.cbOms5 = New System.Windows.Forms.ComboBox()
+        Me.cbOms4 = New System.Windows.Forms.ComboBox()
+        Me.cbOms3 = New System.Windows.Forms.ComboBox()
+        Me.cbOms2 = New System.Windows.Forms.ComboBox()
+        Me.cbOms1 = New System.Windows.Forms.ComboBox()
+        Me.txtAantal10 = New System.Windows.Forms.TextBox()
+        Me.txtAantal9 = New System.Windows.Forms.TextBox()
+        Me.txtAantal8 = New System.Windows.Forms.TextBox()
+        Me.txtAantal7 = New System.Windows.Forms.TextBox()
+        Me.txtAantal6 = New System.Windows.Forms.TextBox()
+        Me.txtAantal5 = New System.Windows.Forms.TextBox()
+        Me.txtAantal4 = New System.Windows.Forms.TextBox()
+        Me.txtAantal3 = New System.Windows.Forms.TextBox()
+        Me.txtAantal2 = New System.Windows.Forms.TextBox()
+        Me.txtAantal1 = New System.Windows.Forms.TextBox()
         Me.btnResetNewFac = New System.Windows.Forms.Button()
         Me.dtp1 = New System.Windows.Forms.DateTimePicker()
         Me.lblTeBetalen = New System.Windows.Forms.Label()
@@ -86,26 +107,6 @@ Partial Class frmMain
         Me.lblFacDat = New System.Windows.Forms.Label()
         Me.lblFacNr = New System.Windows.Forms.Label()
         Me.lblBtwNr = New System.Windows.Forms.Label()
-        Me.cbOms10 = New System.Windows.Forms.ComboBox()
-        Me.cbOms9 = New System.Windows.Forms.ComboBox()
-        Me.cbOms8 = New System.Windows.Forms.ComboBox()
-        Me.cbOms7 = New System.Windows.Forms.ComboBox()
-        Me.cbOms6 = New System.Windows.Forms.ComboBox()
-        Me.cbOms5 = New System.Windows.Forms.ComboBox()
-        Me.cbOms4 = New System.Windows.Forms.ComboBox()
-        Me.cbOms3 = New System.Windows.Forms.ComboBox()
-        Me.cbOms2 = New System.Windows.Forms.ComboBox()
-        Me.cbOms1 = New System.Windows.Forms.ComboBox()
-        Me.txtAantal10 = New System.Windows.Forms.TextBox()
-        Me.txtAantal9 = New System.Windows.Forms.TextBox()
-        Me.txtAantal8 = New System.Windows.Forms.TextBox()
-        Me.txtAantal7 = New System.Windows.Forms.TextBox()
-        Me.txtAantal6 = New System.Windows.Forms.TextBox()
-        Me.txtAantal5 = New System.Windows.Forms.TextBox()
-        Me.txtAantal4 = New System.Windows.Forms.TextBox()
-        Me.txtAantal3 = New System.Windows.Forms.TextBox()
-        Me.txtAantal2 = New System.Windows.Forms.TextBox()
-        Me.txtAantal1 = New System.Windows.Forms.TextBox()
         Me.pbQ8 = New System.Windows.Forms.PictureBox()
         Me.pbInvoice = New System.Windows.Forms.PictureBox()
         Me.TabNewKlant = New System.Windows.Forms.TabPage()
@@ -131,8 +132,10 @@ Partial Class frmMain
         Me.lblNewKlantID = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabNewArt = New System.Windows.Forms.TabPage()
+        Me.btnArtToevoegen = New System.Windows.Forms.Button()
+        Me.dgvShowArtikels = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtPïjs = New System.Windows.Forms.TextBox()
+        Me.txtBTW = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtPrijs = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -174,11 +177,45 @@ Partial Class frmMain
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.dgvShowArtikels = New System.Windows.Forms.DataGridView()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox15 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabWelcome.SuspendLayout()
         CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNewFac.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         CType(Me.pbUitkomst, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbQ8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbInvoice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -187,6 +224,7 @@ Partial Class frmMain
         CType(Me.dgvShowKlanten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TabNewArt.SuspendLayout()
+        CType(Me.dgvShowArtikels, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.TabEditPrijzen.SuspendLayout()
         CType(Me.dgvPrijzen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -199,7 +237,6 @@ Partial Class frmMain
         Me.MenuStrip1.SuspendLayout()
         Me.gbMenu.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvShowArtikels, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -259,6 +296,7 @@ Partial Class frmMain
         '
         'TabNewFac
         '
+        Me.TabNewFac.Controls.Add(Me.Panel1)
         Me.TabNewFac.Controls.Add(Me.btnResetNewFac)
         Me.TabNewFac.Controls.Add(Me.dtp1)
         Me.TabNewFac.Controls.Add(Me.lblTeBetalen)
@@ -316,26 +354,6 @@ Partial Class frmMain
         Me.TabNewFac.Controls.Add(Me.lblFacDat)
         Me.TabNewFac.Controls.Add(Me.lblFacNr)
         Me.TabNewFac.Controls.Add(Me.lblBtwNr)
-        Me.TabNewFac.Controls.Add(Me.cbOms10)
-        Me.TabNewFac.Controls.Add(Me.cbOms9)
-        Me.TabNewFac.Controls.Add(Me.cbOms8)
-        Me.TabNewFac.Controls.Add(Me.cbOms7)
-        Me.TabNewFac.Controls.Add(Me.cbOms6)
-        Me.TabNewFac.Controls.Add(Me.cbOms5)
-        Me.TabNewFac.Controls.Add(Me.cbOms4)
-        Me.TabNewFac.Controls.Add(Me.cbOms3)
-        Me.TabNewFac.Controls.Add(Me.cbOms2)
-        Me.TabNewFac.Controls.Add(Me.cbOms1)
-        Me.TabNewFac.Controls.Add(Me.txtAantal10)
-        Me.TabNewFac.Controls.Add(Me.txtAantal9)
-        Me.TabNewFac.Controls.Add(Me.txtAantal8)
-        Me.TabNewFac.Controls.Add(Me.txtAantal7)
-        Me.TabNewFac.Controls.Add(Me.txtAantal6)
-        Me.TabNewFac.Controls.Add(Me.txtAantal5)
-        Me.TabNewFac.Controls.Add(Me.txtAantal4)
-        Me.TabNewFac.Controls.Add(Me.txtAantal3)
-        Me.TabNewFac.Controls.Add(Me.txtAantal2)
-        Me.TabNewFac.Controls.Add(Me.txtAantal1)
         Me.TabNewFac.Controls.Add(Me.pbQ8)
         Me.TabNewFac.Controls.Add(Me.pbInvoice)
         Me.TabNewFac.Location = New System.Drawing.Point(4, 22)
@@ -345,6 +363,219 @@ Partial Class frmMain
         Me.TabNewFac.TabIndex = 0
         Me.TabNewFac.Text = "TabPage1"
         Me.TabNewFac.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.AutoScroll = True
+        Me.Panel1.AutoScrollMargin = New System.Drawing.Size(100, 10)
+        Me.Panel1.Controls.Add(Me.ComboBox14)
+        Me.Panel1.Controls.Add(Me.ComboBox15)
+        Me.Panel1.Controls.Add(Me.ComboBox16)
+        Me.Panel1.Controls.Add(Me.ComboBox17)
+        Me.Panel1.Controls.Add(Me.ComboBox18)
+        Me.Panel1.Controls.Add(Me.ComboBox19)
+        Me.Panel1.Controls.Add(Me.ComboBox20)
+        Me.Panel1.Controls.Add(Me.TextBox14)
+        Me.Panel1.Controls.Add(Me.TextBox15)
+        Me.Panel1.Controls.Add(Me.TextBox16)
+        Me.Panel1.Controls.Add(Me.TextBox17)
+        Me.Panel1.Controls.Add(Me.TextBox18)
+        Me.Panel1.Controls.Add(Me.TextBox19)
+        Me.Panel1.Controls.Add(Me.TextBox20)
+        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.ComboBox2)
+        Me.Panel1.Controls.Add(Me.ComboBox3)
+        Me.Panel1.Controls.Add(Me.ComboBox4)
+        Me.Panel1.Controls.Add(Me.ComboBox5)
+        Me.Panel1.Controls.Add(Me.ComboBox6)
+        Me.Panel1.Controls.Add(Me.ComboBox7)
+        Me.Panel1.Controls.Add(Me.ComboBox8)
+        Me.Panel1.Controls.Add(Me.ComboBox9)
+        Me.Panel1.Controls.Add(Me.ComboBox10)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.TextBox6)
+        Me.Panel1.Controls.Add(Me.TextBox7)
+        Me.Panel1.Controls.Add(Me.TextBox8)
+        Me.Panel1.Controls.Add(Me.TextBox9)
+        Me.Panel1.Controls.Add(Me.TextBox10)
+        Me.Panel1.Controls.Add(Me.cbOms10)
+        Me.Panel1.Controls.Add(Me.cbOms9)
+        Me.Panel1.Controls.Add(Me.cbOms8)
+        Me.Panel1.Controls.Add(Me.cbOms7)
+        Me.Panel1.Controls.Add(Me.cbOms6)
+        Me.Panel1.Controls.Add(Me.cbOms5)
+        Me.Panel1.Controls.Add(Me.cbOms4)
+        Me.Panel1.Controls.Add(Me.cbOms3)
+        Me.Panel1.Controls.Add(Me.cbOms2)
+        Me.Panel1.Controls.Add(Me.cbOms1)
+        Me.Panel1.Controls.Add(Me.txtAantal10)
+        Me.Panel1.Controls.Add(Me.txtAantal9)
+        Me.Panel1.Controls.Add(Me.txtAantal8)
+        Me.Panel1.Controls.Add(Me.txtAantal7)
+        Me.Panel1.Controls.Add(Me.txtAantal6)
+        Me.Panel1.Controls.Add(Me.txtAantal5)
+        Me.Panel1.Controls.Add(Me.txtAantal4)
+        Me.Panel1.Controls.Add(Me.txtAantal3)
+        Me.Panel1.Controls.Add(Me.txtAantal2)
+        Me.Panel1.Controls.Add(Me.txtAantal1)
+        Me.Panel1.Location = New System.Drawing.Point(23, 220)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(725, 278)
+        Me.Panel1.TabIndex = 86
+        '
+        'cbOms10
+        '
+        Me.cbOms10.FormattingEnabled = True
+        Me.cbOms10.Location = New System.Drawing.Point(145, 263)
+        Me.cbOms10.Name = "cbOms10"
+        Me.cbOms10.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms10.TabIndex = 45
+        '
+        'cbOms9
+        '
+        Me.cbOms9.FormattingEnabled = True
+        Me.cbOms9.Location = New System.Drawing.Point(145, 211)
+        Me.cbOms9.Name = "cbOms9"
+        Me.cbOms9.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms9.TabIndex = 44
+        '
+        'cbOms8
+        '
+        Me.cbOms8.FormattingEnabled = True
+        Me.cbOms8.Location = New System.Drawing.Point(145, 185)
+        Me.cbOms8.Name = "cbOms8"
+        Me.cbOms8.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms8.TabIndex = 43
+        '
+        'cbOms7
+        '
+        Me.cbOms7.FormattingEnabled = True
+        Me.cbOms7.Location = New System.Drawing.Point(145, 159)
+        Me.cbOms7.Name = "cbOms7"
+        Me.cbOms7.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms7.TabIndex = 42
+        '
+        'cbOms6
+        '
+        Me.cbOms6.FormattingEnabled = True
+        Me.cbOms6.Location = New System.Drawing.Point(145, 134)
+        Me.cbOms6.Name = "cbOms6"
+        Me.cbOms6.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms6.TabIndex = 41
+        '
+        'cbOms5
+        '
+        Me.cbOms5.FormattingEnabled = True
+        Me.cbOms5.Location = New System.Drawing.Point(145, 107)
+        Me.cbOms5.Name = "cbOms5"
+        Me.cbOms5.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms5.TabIndex = 40
+        '
+        'cbOms4
+        '
+        Me.cbOms4.FormattingEnabled = True
+        Me.cbOms4.Location = New System.Drawing.Point(145, 82)
+        Me.cbOms4.Name = "cbOms4"
+        Me.cbOms4.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms4.TabIndex = 39
+        '
+        'cbOms3
+        '
+        Me.cbOms3.FormattingEnabled = True
+        Me.cbOms3.Location = New System.Drawing.Point(145, 55)
+        Me.cbOms3.Name = "cbOms3"
+        Me.cbOms3.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms3.TabIndex = 38
+        '
+        'cbOms2
+        '
+        Me.cbOms2.FormattingEnabled = True
+        Me.cbOms2.Location = New System.Drawing.Point(145, 31)
+        Me.cbOms2.Name = "cbOms2"
+        Me.cbOms2.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms2.TabIndex = 37
+        '
+        'cbOms1
+        '
+        Me.cbOms1.FormattingEnabled = True
+        Me.cbOms1.Location = New System.Drawing.Point(145, 4)
+        Me.cbOms1.Name = "cbOms1"
+        Me.cbOms1.Size = New System.Drawing.Size(325, 21)
+        Me.cbOms1.TabIndex = 36
+        '
+        'txtAantal10
+        '
+        Me.txtAantal10.Location = New System.Drawing.Point(10, 238)
+        Me.txtAantal10.Name = "txtAantal10"
+        Me.txtAantal10.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal10.TabIndex = 35
+        '
+        'txtAantal9
+        '
+        Me.txtAantal9.Location = New System.Drawing.Point(10, 211)
+        Me.txtAantal9.Name = "txtAantal9"
+        Me.txtAantal9.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal9.TabIndex = 34
+        '
+        'txtAantal8
+        '
+        Me.txtAantal8.Location = New System.Drawing.Point(10, 186)
+        Me.txtAantal8.Name = "txtAantal8"
+        Me.txtAantal8.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal8.TabIndex = 33
+        '
+        'txtAantal7
+        '
+        Me.txtAantal7.Location = New System.Drawing.Point(10, 160)
+        Me.txtAantal7.Name = "txtAantal7"
+        Me.txtAantal7.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal7.TabIndex = 32
+        '
+        'txtAantal6
+        '
+        Me.txtAantal6.Location = New System.Drawing.Point(10, 134)
+        Me.txtAantal6.Name = "txtAantal6"
+        Me.txtAantal6.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal6.TabIndex = 31
+        '
+        'txtAantal5
+        '
+        Me.txtAantal5.Location = New System.Drawing.Point(10, 82)
+        Me.txtAantal5.Name = "txtAantal5"
+        Me.txtAantal5.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal5.TabIndex = 30
+        '
+        'txtAantal4
+        '
+        Me.txtAantal4.Location = New System.Drawing.Point(10, 108)
+        Me.txtAantal4.Name = "txtAantal4"
+        Me.txtAantal4.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal4.TabIndex = 29
+        '
+        'txtAantal3
+        '
+        Me.txtAantal3.Location = New System.Drawing.Point(10, 56)
+        Me.txtAantal3.Name = "txtAantal3"
+        Me.txtAantal3.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal3.TabIndex = 28
+        '
+        'txtAantal2
+        '
+        Me.txtAantal2.Location = New System.Drawing.Point(10, 30)
+        Me.txtAantal2.Name = "txtAantal2"
+        Me.txtAantal2.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal2.TabIndex = 27
+        '
+        'txtAantal1
+        '
+        Me.txtAantal1.Location = New System.Drawing.Point(10, 4)
+        Me.txtAantal1.Name = "txtAantal1"
+        Me.txtAantal1.Size = New System.Drawing.Size(59, 20)
+        Me.txtAantal1.TabIndex = 26
         '
         'btnResetNewFac
         '
@@ -858,156 +1089,6 @@ Partial Class frmMain
         Me.lblBtwNr.Size = New System.Drawing.Size(0, 16)
         Me.lblBtwNr.TabIndex = 27
         '
-        'cbOms10
-        '
-        Me.cbOms10.FormattingEnabled = True
-        Me.cbOms10.Location = New System.Drawing.Point(167, 458)
-        Me.cbOms10.Name = "cbOms10"
-        Me.cbOms10.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms10.TabIndex = 25
-        '
-        'cbOms9
-        '
-        Me.cbOms9.FormattingEnabled = True
-        Me.cbOms9.Location = New System.Drawing.Point(167, 432)
-        Me.cbOms9.Name = "cbOms9"
-        Me.cbOms9.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms9.TabIndex = 24
-        '
-        'cbOms8
-        '
-        Me.cbOms8.FormattingEnabled = True
-        Me.cbOms8.Location = New System.Drawing.Point(167, 406)
-        Me.cbOms8.Name = "cbOms8"
-        Me.cbOms8.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms8.TabIndex = 23
-        '
-        'cbOms7
-        '
-        Me.cbOms7.FormattingEnabled = True
-        Me.cbOms7.Location = New System.Drawing.Point(167, 380)
-        Me.cbOms7.Name = "cbOms7"
-        Me.cbOms7.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms7.TabIndex = 22
-        '
-        'cbOms6
-        '
-        Me.cbOms6.FormattingEnabled = True
-        Me.cbOms6.Location = New System.Drawing.Point(167, 355)
-        Me.cbOms6.Name = "cbOms6"
-        Me.cbOms6.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms6.TabIndex = 21
-        '
-        'cbOms5
-        '
-        Me.cbOms5.FormattingEnabled = True
-        Me.cbOms5.Location = New System.Drawing.Point(167, 328)
-        Me.cbOms5.Name = "cbOms5"
-        Me.cbOms5.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms5.TabIndex = 20
-        '
-        'cbOms4
-        '
-        Me.cbOms4.FormattingEnabled = True
-        Me.cbOms4.Location = New System.Drawing.Point(167, 303)
-        Me.cbOms4.Name = "cbOms4"
-        Me.cbOms4.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms4.TabIndex = 19
-        '
-        'cbOms3
-        '
-        Me.cbOms3.FormattingEnabled = True
-        Me.cbOms3.Location = New System.Drawing.Point(167, 276)
-        Me.cbOms3.Name = "cbOms3"
-        Me.cbOms3.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms3.TabIndex = 17
-        '
-        'cbOms2
-        '
-        Me.cbOms2.FormattingEnabled = True
-        Me.cbOms2.Location = New System.Drawing.Point(167, 252)
-        Me.cbOms2.Name = "cbOms2"
-        Me.cbOms2.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms2.TabIndex = 16
-        '
-        'cbOms1
-        '
-        Me.cbOms1.FormattingEnabled = True
-        Me.cbOms1.Location = New System.Drawing.Point(167, 225)
-        Me.cbOms1.Name = "cbOms1"
-        Me.cbOms1.Size = New System.Drawing.Size(325, 21)
-        Me.cbOms1.TabIndex = 15
-        '
-        'txtAantal10
-        '
-        Me.txtAantal10.Location = New System.Drawing.Point(32, 459)
-        Me.txtAantal10.Name = "txtAantal10"
-        Me.txtAantal10.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal10.TabIndex = 14
-        '
-        'txtAantal9
-        '
-        Me.txtAantal9.Location = New System.Drawing.Point(32, 433)
-        Me.txtAantal9.Name = "txtAantal9"
-        Me.txtAantal9.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal9.TabIndex = 13
-        '
-        'txtAantal8
-        '
-        Me.txtAantal8.Location = New System.Drawing.Point(32, 407)
-        Me.txtAantal8.Name = "txtAantal8"
-        Me.txtAantal8.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal8.TabIndex = 12
-        '
-        'txtAantal7
-        '
-        Me.txtAantal7.Location = New System.Drawing.Point(32, 381)
-        Me.txtAantal7.Name = "txtAantal7"
-        Me.txtAantal7.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal7.TabIndex = 11
-        '
-        'txtAantal6
-        '
-        Me.txtAantal6.Location = New System.Drawing.Point(32, 355)
-        Me.txtAantal6.Name = "txtAantal6"
-        Me.txtAantal6.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal6.TabIndex = 10
-        '
-        'txtAantal5
-        '
-        Me.txtAantal5.Location = New System.Drawing.Point(32, 329)
-        Me.txtAantal5.Name = "txtAantal5"
-        Me.txtAantal5.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal5.TabIndex = 9
-        '
-        'txtAantal4
-        '
-        Me.txtAantal4.Location = New System.Drawing.Point(32, 303)
-        Me.txtAantal4.Name = "txtAantal4"
-        Me.txtAantal4.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal4.TabIndex = 8
-        '
-        'txtAantal3
-        '
-        Me.txtAantal3.Location = New System.Drawing.Point(32, 277)
-        Me.txtAantal3.Name = "txtAantal3"
-        Me.txtAantal3.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal3.TabIndex = 7
-        '
-        'txtAantal2
-        '
-        Me.txtAantal2.Location = New System.Drawing.Point(32, 251)
-        Me.txtAantal2.Name = "txtAantal2"
-        Me.txtAantal2.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal2.TabIndex = 6
-        '
-        'txtAantal1
-        '
-        Me.txtAantal1.Location = New System.Drawing.Point(32, 225)
-        Me.txtAantal1.Name = "txtAantal1"
-        Me.txtAantal1.Size = New System.Drawing.Size(59, 20)
-        Me.txtAantal1.TabIndex = 5
-        '
         'pbQ8
         '
         Me.pbQ8.Location = New System.Drawing.Point(528, 14)
@@ -1057,7 +1138,6 @@ Partial Class frmMain
         'dgvShowKlanten
         '
         Me.dgvShowKlanten.AllowUserToAddRows = False
-        Me.dgvShowKlanten.AllowUserToDeleteRows = False
         Me.dgvShowKlanten.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvShowKlanten.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvShowKlanten.Location = New System.Drawing.Point(31, 208)
@@ -1230,6 +1310,7 @@ Partial Class frmMain
         '
         'TabNewArt
         '
+        Me.TabNewArt.Controls.Add(Me.btnArtToevoegen)
         Me.TabNewArt.Controls.Add(Me.dgvShowArtikels)
         Me.TabNewArt.Controls.Add(Me.GroupBox2)
         Me.TabNewArt.Controls.Add(Me.lblArtikelgegevens)
@@ -1240,9 +1321,27 @@ Partial Class frmMain
         Me.TabNewArt.Text = "tabNewArt"
         Me.TabNewArt.UseVisualStyleBackColor = True
         '
+        'btnArtToevoegen
+        '
+        Me.btnArtToevoegen.Location = New System.Drawing.Point(21, 175)
+        Me.btnArtToevoegen.Name = "btnArtToevoegen"
+        Me.btnArtToevoegen.Size = New System.Drawing.Size(75, 23)
+        Me.btnArtToevoegen.TabIndex = 21
+        Me.btnArtToevoegen.Text = "Toevoegen"
+        Me.btnArtToevoegen.UseVisualStyleBackColor = True
+        '
+        'dgvShowArtikels
+        '
+        Me.dgvShowArtikels.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvShowArtikels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvShowArtikels.Location = New System.Drawing.Point(21, 201)
+        Me.dgvShowArtikels.Name = "dgvShowArtikels"
+        Me.dgvShowArtikels.Size = New System.Drawing.Size(723, 403)
+        Me.dgvShowArtikels.TabIndex = 20
+        '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.txtPïjs)
+        Me.GroupBox2.Controls.Add(Me.txtBTW)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.txtPrijs)
         Me.GroupBox2.Controls.Add(Me.Label8)
@@ -1256,12 +1355,12 @@ Partial Class frmMain
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
         '
-        'txtPïjs
+        'txtBTW
         '
-        Me.txtPïjs.Location = New System.Drawing.Point(118, 100)
-        Me.txtPïjs.Name = "txtPïjs"
-        Me.txtPïjs.Size = New System.Drawing.Size(100, 20)
-        Me.txtPïjs.TabIndex = 23
+        Me.txtBTW.Location = New System.Drawing.Point(118, 100)
+        Me.txtBTW.Name = "txtBTW"
+        Me.txtBTW.Size = New System.Drawing.Size(100, 20)
+        Me.txtBTW.TabIndex = 23
         '
         'Label7
         '
@@ -1616,14 +1715,260 @@ Partial Class frmMain
         '
         Me.ToolTip1.IsBalloon = True
         '
-        'dgvShowArtikels
+        'ComboBox1
         '
-        Me.dgvShowArtikels.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvShowArtikels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvShowArtikels.Location = New System.Drawing.Point(21, 201)
-        Me.dgvShowArtikels.Name = "dgvShowArtikels"
-        Me.dgvShowArtikels.Size = New System.Drawing.Size(723, 403)
-        Me.dgvShowArtikels.TabIndex = 20
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(145, 504)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox1.TabIndex = 65
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(145, 478)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox2.TabIndex = 64
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(145, 452)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox3.TabIndex = 63
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(145, 426)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox4.TabIndex = 62
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(145, 401)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox5.TabIndex = 61
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(145, 374)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox6.TabIndex = 60
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Location = New System.Drawing.Point(145, 349)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox7.TabIndex = 59
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(145, 322)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox8.TabIndex = 58
+        '
+        'ComboBox9
+        '
+        Me.ComboBox9.FormattingEnabled = True
+        Me.ComboBox9.Location = New System.Drawing.Point(145, 298)
+        Me.ComboBox9.Name = "ComboBox9"
+        Me.ComboBox9.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox9.TabIndex = 57
+        '
+        'ComboBox10
+        '
+        Me.ComboBox10.FormattingEnabled = True
+        Me.ComboBox10.Location = New System.Drawing.Point(144, 237)
+        Me.ComboBox10.Name = "ComboBox10"
+        Me.ComboBox10.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox10.TabIndex = 56
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(10, 501)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox1.TabIndex = 55
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(10, 475)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox2.TabIndex = 54
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(10, 449)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox3.TabIndex = 53
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(10, 423)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox4.TabIndex = 52
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(10, 397)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox5.TabIndex = 51
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(10, 371)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox6.TabIndex = 50
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(10, 345)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox7.TabIndex = 49
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(10, 319)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox8.TabIndex = 48
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(10, 293)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox9.TabIndex = 47
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(10, 267)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox10.TabIndex = 46
+        '
+        'ComboBox14
+        '
+        Me.ComboBox14.FormattingEnabled = True
+        Me.ComboBox14.Location = New System.Drawing.Point(145, 690)
+        Me.ComboBox14.Name = "ComboBox14"
+        Me.ComboBox14.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox14.TabIndex = 82
+        '
+        'ComboBox15
+        '
+        Me.ComboBox15.FormattingEnabled = True
+        Me.ComboBox15.Location = New System.Drawing.Point(145, 665)
+        Me.ComboBox15.Name = "ComboBox15"
+        Me.ComboBox15.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox15.TabIndex = 81
+        '
+        'ComboBox16
+        '
+        Me.ComboBox16.FormattingEnabled = True
+        Me.ComboBox16.Location = New System.Drawing.Point(145, 638)
+        Me.ComboBox16.Name = "ComboBox16"
+        Me.ComboBox16.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox16.TabIndex = 80
+        '
+        'ComboBox17
+        '
+        Me.ComboBox17.FormattingEnabled = True
+        Me.ComboBox17.Location = New System.Drawing.Point(145, 613)
+        Me.ComboBox17.Name = "ComboBox17"
+        Me.ComboBox17.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox17.TabIndex = 79
+        '
+        'ComboBox18
+        '
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Location = New System.Drawing.Point(145, 586)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox18.TabIndex = 78
+        '
+        'ComboBox19
+        '
+        Me.ComboBox19.FormattingEnabled = True
+        Me.ComboBox19.Location = New System.Drawing.Point(145, 562)
+        Me.ComboBox19.Name = "ComboBox19"
+        Me.ComboBox19.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox19.TabIndex = 77
+        '
+        'ComboBox20
+        '
+        Me.ComboBox20.FormattingEnabled = True
+        Me.ComboBox20.Location = New System.Drawing.Point(145, 535)
+        Me.ComboBox20.Name = "ComboBox20"
+        Me.ComboBox20.Size = New System.Drawing.Size(325, 21)
+        Me.ComboBox20.TabIndex = 76
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(10, 691)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox14.TabIndex = 72
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(10, 666)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox15.TabIndex = 71
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Location = New System.Drawing.Point(10, 634)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox16.TabIndex = 70
+        '
+        'TextBox17
+        '
+        Me.TextBox17.Location = New System.Drawing.Point(10, 608)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox17.TabIndex = 69
+        '
+        'TextBox18
+        '
+        Me.TextBox18.Location = New System.Drawing.Point(10, 582)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox18.TabIndex = 68
+        '
+        'TextBox19
+        '
+        Me.TextBox19.Location = New System.Drawing.Point(10, 556)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox19.TabIndex = 67
+        '
+        'TextBox20
+        '
+        Me.TextBox20.Location = New System.Drawing.Point(10, 530)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox20.TabIndex = 66
         '
         'frmMain
         '
@@ -1646,6 +1991,8 @@ Partial Class frmMain
         CType(Me.pbPijl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNewFac.ResumeLayout(False)
         Me.TabNewFac.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.pbUitkomst, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbQ8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbInvoice, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1657,6 +2004,7 @@ Partial Class frmMain
         Me.GroupBox1.PerformLayout()
         Me.TabNewArt.ResumeLayout(False)
         Me.TabNewArt.PerformLayout()
+        CType(Me.dgvShowArtikels, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.TabEditPrijzen.ResumeLayout(False)
@@ -1674,7 +2022,6 @@ Partial Class frmMain
         Me.MenuStrip1.PerformLayout()
         Me.gbMenu.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvShowArtikels, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1684,26 +2031,6 @@ Partial Class frmMain
     Friend WithEvents TabEditPrijzen As System.Windows.Forms.TabPage
     Friend WithEvents pbInvoice As System.Windows.Forms.PictureBox
     Friend WithEvents pbQ8 As System.Windows.Forms.PictureBox
-    Friend WithEvents txtAantal6 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAantal5 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAantal4 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAantal3 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAantal2 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAantal1 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAantal10 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAantal9 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAantal8 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAantal7 As System.Windows.Forms.TextBox
-    Friend WithEvents cbOms1 As System.Windows.Forms.ComboBox
-    Friend WithEvents cbOms10 As System.Windows.Forms.ComboBox
-    Friend WithEvents cbOms9 As System.Windows.Forms.ComboBox
-    Friend WithEvents cbOms8 As System.Windows.Forms.ComboBox
-    Friend WithEvents cbOms7 As System.Windows.Forms.ComboBox
-    Friend WithEvents cbOms6 As System.Windows.Forms.ComboBox
-    Friend WithEvents cbOms5 As System.Windows.Forms.ComboBox
-    Friend WithEvents cbOms4 As System.Windows.Forms.ComboBox
-    Friend WithEvents cbOms3 As System.Windows.Forms.ComboBox
-    Friend WithEvents cbOms2 As System.Windows.Forms.ComboBox
     Friend WithEvents lblBtwNr As System.Windows.Forms.Label
     Friend WithEvents lblFacNr As System.Windows.Forms.Label
     Friend WithEvents lblFacDat As System.Windows.Forms.Label
@@ -1821,7 +2148,7 @@ Partial Class frmMain
     Friend WithEvents TabNewArt As System.Windows.Forms.TabPage
     Friend WithEvents btnNewArt As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtPïjs As System.Windows.Forms.TextBox
+    Friend WithEvents txtBTW As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtPrijs As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -1831,5 +2158,61 @@ Partial Class frmMain
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents lblArtikelgegevens As System.Windows.Forms.Label
     Friend WithEvents dgvShowArtikels As System.Windows.Forms.DataGridView
+    Friend WithEvents btnArtToevoegen As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents cbOms10 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbOms9 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbOms8 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbOms7 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbOms6 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbOms5 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbOms4 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbOms3 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbOms2 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbOms1 As System.Windows.Forms.ComboBox
+    Friend WithEvents txtAantal10 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAantal9 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAantal8 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAantal7 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAantal6 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAantal5 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAantal4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAantal3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAantal2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAantal1 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox14 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox15 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox16 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox17 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox18 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox19 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox20 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox17 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox18 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox19 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox20 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox8 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox9 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox10 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
 
 End Class

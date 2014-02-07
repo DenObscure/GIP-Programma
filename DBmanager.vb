@@ -178,6 +178,20 @@ Public Class DBmanager
         End Using
     End Function
 
+    Public Shared Function ArtikelToevoegen(ByVal a As Artikel) As Integer
+        Using conDB = DBmanager.Getconnection()
+            Using comAddFact = conDB.CreateCommand()
+                comAddFact.CommandType = CommandType.Text
+                If IsNothing(a) Then
+                    Return 0
+                Else
+                    comAddFact.CommandText = "insert into tblArtikel(ArtikelID, ArtikelOmschrijving, Eenheidsprijs, BTW) values ('" & a.ArtikelID & "','" & a.ArtikelOmschrijving & "','" & a.Eenheidsprijs & "','" & a.btw & "')"
+                End If
+                conDB.Open()
+                Return comAddFact.ExecuteNonQuery()
+            End Using
+        End Using
+    End Function
 
     Public Shared Function SelectedFactuur(ByVal SelectedF As Integer)
         Dim sql As String = "SELECT  Artikelomschrijving, aantal FROM tblGegevens, tblArtikel WHERE tblArtikel.ArtikelID=tblGegevens.artikelID AND tblGegevens.FactuurID=" & SelectedF
@@ -243,8 +257,34 @@ Public Class DBmanager
     End Function
 
     Public Shared Function DeleteRowKlant(ByVal SelectedRow As Integer) As Integer
+        DeleteFacGegFromKlant(SelectedRow)
+        DeleteFacFromKlant(SelectedRow)
         Using conDB = Getconnection()
             Dim SqlString As String = "DELETE FROM tblKlant WHERE KlantID = ?"
+            Using cmd As New OleDbCommand(SqlString, conDB)
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.AddWithValue("selectedRow", SelectedRow)
+                conDB.Open()
+                Return cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Function
+
+    Public Shared Function DeleteFacGegFromKlant(ByVal SelectedRow As Integer) As Integer
+        Using conDB = Getconnection()
+            Dim SqlString As String = "delete g.*  from tblgegevens g  inner join tblfactuur f ON f.Id= g.factuurID where f.KlantID = ?;"
+            Using cmd As New OleDbCommand(SqlString, conDB)
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.AddWithValue("selectedRow", SelectedRow)
+                conDB.Open()
+                Return cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Function
+
+    Public Shared Function DeleteFacFromKlant(ByVal SelectedRow As Integer) As Integer
+        Using conDB = Getconnection()
+            Dim SqlString As String = "DELETE FROM tblFactuur WHERE KlantID = ?"
             Using cmd As New OleDbCommand(SqlString, conDB)
                 cmd.CommandType = CommandType.Text
                 cmd.Parameters.AddWithValue("selectedRow", SelectedRow)
@@ -269,6 +309,18 @@ Public Class DBmanager
     Public Shared Function DeleteRowFac(ByVal SelectedRow As Integer) As Integer
         Using conDB = Getconnection()
             Dim SqlString As String = "DELETE FROM tblFactuur WHERE Id=?"
+            Using cmd As New OleDbCommand(SqlString, conDB)
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.AddWithValue("selectedRow", SelectedRow)
+                conDB.Open()
+                Return cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Function
+
+    Public Shared Function DeleteRowArtikel(ByVal SelectedRow As Integer) As Integer
+        Using conDB = Getconnection()
+            Dim SqlString As String = "DELETE FROM tblArtikel WHERE ArtikelID = ?"
             Using cmd As New OleDbCommand(SqlString, conDB)
                 cmd.CommandType = CommandType.Text
                 cmd.Parameters.AddWithValue("selectedRow", SelectedRow)
